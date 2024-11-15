@@ -23,12 +23,12 @@ export interface Env {
 }
 
 export default {
-  async fetch(
-    request: Request,
-    env: Env,
-    ctx: ExecutionContext
-  ): Promise<Response> {
-    console.log(`Hello .....`);
-    return new Response('Hello World!');
+  async fetch(request: Request): Promise<Response> {
+    /**
+     * Replace `remote` with the host you wish to send requests to
+     */
+    const remote = 'https://example.com';
+
+    return await fetch(remote, request);
   },
 };
