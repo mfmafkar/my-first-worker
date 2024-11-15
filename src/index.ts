@@ -29,6 +29,8 @@ export default {
      */
     const remote = 'https://example.com';
 
+    console.log('test log ...');
+
     return await fetch(remote, request);
   },
 };
